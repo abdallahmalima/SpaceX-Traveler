@@ -1,9 +1,9 @@
 import React from 'react';
-import MyProfile from '../components/Profile';
+import ProfileSection from '../components/MyProfile';
 
 const Profile = () => (
   <div>
-    <MyProfile />
+    <ProfileSection />
   </div>
 );
 
