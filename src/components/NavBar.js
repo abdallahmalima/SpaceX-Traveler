@@ -1,39 +1,39 @@
 import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
 import { v4 as uuidv4 } from 'uuid';
+import { NavLink, useLocation } from 'react-router-dom';
 import Logo from '../assets/planet_logo.png';
-import NavbarStyles from './NavbarStyles.module.css';
+import NavBarStyles from './NavBarStyles.module.css';
 
-const Navbar = () => {
+const NavBar = () => {
   const location = useLocation();
   const rocketLinkStyles = (pathname) => {
     if (pathname === '/rockets' || pathname === '/' || pathname === '') {
-      return `${NavbarStyles.linkStyles} ${NavbarStyles.active}`;
+      return `${NavBarStyles.linkStyles} ${NavBarStyles.active}`;
     }
-    return `${NavbarStyles.linkStyles}`;
+    return `${NavBarStyles.linkStyles}`;
   };
 
   const missionLinkStyles = (pathname) => {
     if (pathname === '/mission') {
-      return `${NavbarStyles.linkStyles} ${NavbarStyles.navLinkBorder} ${NavbarStyles.active}`;
+      return `${NavBarStyles.linkStyles} ${NavBarStyles.navLinkBorder} ${NavBarStyles.active}`;
     }
-    return `${NavbarStyles.linkStyles} ${NavbarStyles.navLinkBorder}`;
+    return `${NavBarStyles.linkStyles} ${NavBarStyles.navLinkBorder}`;
   };
 
   const profileLinkStyles = (pathname) => {
     if (pathname === 'profile') {
-      return `${NavbarStyles.linkStyles} ${NavbarStyles.navLinkBorder} ${NavbarStyles.active}`;
+      return `${NavBarStyles.linkStyles} ${NavBarStyles.navLinkBorder} ${NavBarStyles.active}`;
     }
-    return `${NavbarStyles.linkStyles} ${NavbarStyles.navLinkBorder}`;
+    return `${NavBarStyles.linkStyles}`;
   };
 
   return (
-    <nav className={NavbarStyles.navbar}>
-      <div className={NavbarStyles.logoHolder}>
-        <img src={Logo} alt="Planet" className={NavbarStyles.logo} />
+    <nav className={NavBarStyles.navbar}>
+      <div className={NavBarStyles.logoHolder}>
+        <img src={Logo} alt="Planet" className={NavBarStyles.logo} />
         <h1>Space Travellers HUB</h1>
       </div>
-      <div className={NavbarStyles.linksHolder}>
+      <div className={NavBarStyles.linksHolder}>
         <NavLink key={uuidv4()} className={rocketLinkStyles(location.pathname)} to="/rockets">
           Rockets
         </NavLink>
@@ -48,4 +48,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
