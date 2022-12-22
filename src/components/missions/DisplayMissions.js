@@ -20,7 +20,7 @@ const DisplayMissions = (props) => {
         {description}
         {' '}
       </td>
-      <td>NOT A MEMBER</td>
+      {isReserved ? <td>MEMBER</td> : <td>NOT A MEMBER</td>}
       <td>
         <button
           className={(isReserved) ? 'red-btn-color' : 'btn-color-blue'}
