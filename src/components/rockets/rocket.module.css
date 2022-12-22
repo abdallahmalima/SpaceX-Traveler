@@ -1,0 +1,49 @@
+.rocketCard {
+  display: flex;
+  margin-top: 33px;
+  gap: 25px;
+}
+
+.details {
+display: flex;
+flex-direction: column;
+}
+
+.img{
+width: 195px;
+}
+
+.btn{
+  width: 125px;
+  padding: 5px;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  border: none;
+  border-radius: 3px;
+}
+
+.btnCanceled{
+  width: 125px;
+  padding: 5px;
+  color: gray;
+  background-color: #fff;
+  border-color: #007bff;
+  border:1px solid gray;
+  border-radius: 3px; 
+}
+
+.reserved {
+    background-color: #00f0f0;
+    padding: 1px;
+    padding-inline: 5px;
+    color: #fff;
+    margin-right: 3px;
+    border-radius: 3px;
+  }
+
+  .container {
+    width: 90%;
+    margin: auto;
+    font-family: sans-serif;
+  }
