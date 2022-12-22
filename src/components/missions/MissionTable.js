@@ -5,8 +5,6 @@ import DisplayMissions from './DisplayMissions';
 
 const MissionTable = () => {
   const missions = useSelector((state) => state.missions.data);
-  console.log(missions);
-
   return (
     <div>
       <table className="missions-table">
