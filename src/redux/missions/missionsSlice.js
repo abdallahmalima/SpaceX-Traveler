@@ -28,7 +28,6 @@ export const fetchMisions = createAsyncThunk(
       };
       missiondata.push(missionData);
     });
-    console.log(missiondata);
     return missiondata;
   },
 );
