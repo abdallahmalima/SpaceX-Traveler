@@ -4,7 +4,6 @@ import store from '../../redux/configureStore';
 import { removeMission } from '../../redux/missions/missionsSlice';
 
 const DisplayMissions = (props) => {
-  console.log(props);
   const {
     id, name, description, isReserved,
   } = props;
