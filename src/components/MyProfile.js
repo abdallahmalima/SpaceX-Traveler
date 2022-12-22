@@ -4,7 +4,7 @@ import Button from 'react-bootstrap/Button';
 const MyProfile = () => (
   <div className="profile">
     <div>
-      <h3>My Missions</h3>
+      <h3>My Mission</h3>
     </div>
     <div>
       <h3>My Rockets</h3>
