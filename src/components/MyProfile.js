@@ -1,9 +1,12 @@
 import React from 'react';
-import Card from 'react-bootstrap/Card';
-import ListGroup from 'react-bootstrap/ListGroup';
+import { useSelector } from 'react-redux';
 import ListReservedMissions from './missions/ListReservedMissions';
+import ReservedRocket from './rockets/reservedRocket';
 
-function MyProfile() {
+const MyProfile = () => {
+  const reservedRockets = (rockets) => rockets.filter((rocket) => rocket.reserved === true);
+  const rockets = useSelector((state) => reservedRockets(state.rockets.rockets));
+
   return (
     <div className="profilesCont">
       <div className="missionsCont">
@@ -12,14 +15,13 @@ function MyProfile() {
       </div>
       <div className="rocketsCont">
         <h3 className="heading">My Rockets</h3>
-        <Card style={{ width: '40rem' }}>
-          <ListGroup variant="flush">
-            <ListGroup.Item>Rocket Name</ListGroup.Item>
-          </ListGroup>
-        </Card>
+
+        {rockets.map((rocket) => (
+          <ReservedRocket key={rocket.id} rocket={rocket} />
+        ))}
       </div>
     </div>
   );
-}
+};
 
 export default MyProfile;
