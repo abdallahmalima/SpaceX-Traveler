@@ -2,6 +2,11 @@
   display: flex;
   margin-top: 33px;
   gap: 25px;
+  /*make look like a card*/
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: #ffffff;
+  padding: 16px;
 }
 
 .details {
@@ -14,7 +19,7 @@ width: 195px;
 }
 
 .btn{
-  width: 125px;
+  width: 135px;
   padding: 5px;
   color: #fff;
   background-color: #007bff;
@@ -24,7 +29,7 @@ width: 195px;
 }
 
 .btnCanceled{
-  width: 125px;
+  width: 135px;
   padding: 5px;
   color: gray;
   background-color: #fff;
@@ -46,4 +51,5 @@ width: 195px;
     width: 90%;
     margin: auto;
     font-family: sans-serif;
+
   }

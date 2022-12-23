@@ -10,23 +10,26 @@ const Rocket = ({
 }) => {
   const dispatch = useDispatch();
 
-  const handleResevation = (id) => {
+  const handleReservation = (id) => {
     if (!reserved) {
       dispatch(reserveRocket(id));
     } else {
       dispatch(cancelReservation(id));
     }
   };
+
   return (
     <main className={rocketStyles.rocketCard}>
       <img src={flickrImage} className={rocketStyles.img} alt="Rocket" />
       <div className={rocketStyles.details}>
         <h4>{rocketName}</h4>
         <p>
-          {(reserved === true) && <span className={rocketStyles.reserved}>Reserved</span>}
+          {reserved && <span className={rocketStyles.reserved}>Reserved</span>}
           {description}
         </p>
-        <button className={!reserved ? rocketStyles.btn : rocketStyles.btnCanceled} type="submit" onClick={() => handleResevation(id)}>Reserve Rocket</button>
+        <button className={!reserved ? rocketStyles.btn : rocketStyles.btnCanceled} type="button" onClick={() => handleReservation(id)}>
+          {reserved ? 'Cancel Reservation' : 'Reserve Rocket'}
+        </button>
       </div>
     </main>
   );
@@ -40,7 +43,6 @@ Rocket.propTypes = {
     flickrImage: PropTypes.string.isRequired,
     reserved: PropTypes.bool,
   }).isRequired,
-
 };
 
 export default Rocket;
