@@ -1,16 +1,25 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import ListGroup from 'react-bootstrap/ListGroup';
+import ListReservedMissions from './missions/ListReservedMissions';
 
-const MyProfile = () => (
-  <div className="profile">
-    <div>
-      <h3>My Mission</h3>
+function MyProfile() {
+  return (
+    <div className="profilesCont">
+      <div className="missionsCont">
+        <h3 className="heading">My Missions</h3>
+        <ListReservedMissions />
+      </div>
+      <div className="rocketsCont">
+        <h3 className="heading">My Rockets</h3>
+        <Card style={{ width: '40rem' }}>
+          <ListGroup variant="flush">
+            <ListGroup.Item>Rocket Name</ListGroup.Item>
+          </ListGroup>
+        </Card>
+      </div>
     </div>
-    <div>
-      <h3>My Rockets</h3>
-      <Button type="button" className="btn btn-primary">Login here</Button>
-    </div>
-  </div>
-);
+  );
+}
 
 export default MyProfile;
