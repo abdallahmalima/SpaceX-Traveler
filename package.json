@@ -45,6 +45,13 @@
       "last 1 safari version"
     ]
   },
+  "jest": {
+    "transformIgnorePatterns": [
+    "/node_modules/(?![@autofiy/autofiyable|@autofiy/property]).+\\.js$",
+    "/node_modules/(?![@autofiy/autofiyable|@autofiy/property]).+\\.ts$",
+    "/node_modules/(?![@autofiy/autofiyable|@autofiy/property]).+\\.tsx$"
+    ]
+    },
   "devDependencies": {
     "@babel/core": "^7.20.5",
     "@babel/eslint-parser": "^7.19.1",
