@@ -2,23 +2,24 @@
   display: flex;
   margin-top: 33px;
   gap: 25px;
-  /*make look like a card*/
+
+  /* make look like a card */
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  background-color: #ffffff;
+  background-color: #fff;
   padding: 16px;
 }
 
 .details {
-display: flex;
-flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
-.img{
-width: 195px;
+.img {
+  width: 195px;
 }
 
-.btn{
+.btn {
   width: 135px;
   padding: 5px;
   color: #fff;
@@ -28,28 +29,27 @@ width: 195px;
   border-radius: 3px;
 }
 
-.btnCanceled{
+.btnCanceled {
   width: 135px;
   padding: 5px;
   color: gray;
   background-color: #fff;
   border-color: #007bff;
-  border:1px solid gray;
-  border-radius: 3px; 
+  border: 1px solid gray;
+  border-radius: 3px;
 }
 
 .reserved {
-    background-color: #00f0f0;
-    padding: 1px;
-    padding-inline: 5px;
-    color: #fff;
-    margin-right: 3px;
-    border-radius: 3px;
-  }
+  background-color: #00f0f0;
+  padding: 1px;
+  padding-inline: 5px;
+  color: #fff;
+  margin-right: 3px;
+  border-radius: 3px;
+}
 
-  .container {
-    width: 90%;
-    margin: auto;
-    font-family: sans-serif;
-
-  }
+.container {
+  width: 90%;
+  margin: auto;
+  font-family: sans-serif;
+}
