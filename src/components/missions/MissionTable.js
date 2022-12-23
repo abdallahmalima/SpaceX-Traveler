@@ -5,14 +5,16 @@ import DisplayMissions from './DisplayMissions';
 
 const MissionTable = () => {
   const missions = useSelector((state) => state.missions.data);
+
   return (
     <div>
-      <table className="missions-table">
+      <table className="table table-striped table-hover table-bordered">
         <thead>
-          <tr className="col-header">
-            <th className="col-header">Mission</th>
+          <tr className="fs-5">
+            <th className="p-2">Mission</th>
             <th>Description</th>
             <th>Status</th>
+            <th>...</th>
           </tr>
         </thead>
         <tbody>

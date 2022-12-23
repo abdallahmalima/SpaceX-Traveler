@@ -1,3 +1,4 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect } from 'react';
 import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Missions from './pages/Missions';

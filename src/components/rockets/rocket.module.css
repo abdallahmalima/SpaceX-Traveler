@@ -16,11 +16,11 @@
 }
 
 .img {
-  width: 195px;
+  width: 155px;
 }
 
 .btn {
-  width: 135px;
+  width: 155px;
   padding: 5px;
   color: #fff;
   background-color: #007bff;
@@ -30,7 +30,7 @@
 }
 
 .btnCanceled {
-  width: 135px;
+  width: 155px;
   padding: 5px;
   color: gray;
   background-color: #fff;
