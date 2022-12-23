@@ -1,12 +1,12 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect } from 'react';
-import { Route, Routes } from 'react-router-dom';
-import Rockets from './pages/Rockets';
-import NavBar from './components/NavBar';
+import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
 import Missions from './pages/Missions';
-import MyProfile from './components/MyProfile';
 import store from './redux/configureStore';
 import { fetchMisions } from './redux/missions/missionsSlice';
+import Profile from './pages/Profile';
+import RocketList from './components/rockets/rocketList';
+import NavBar from './components/NavBar';
 
 const App = () => {
   useEffect(() => {
@@ -14,15 +14,15 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <Router>
       <NavBar />
       <Routes>
-        <Route exact path="/" element={<Rockets />} />
-        <Route path="/rockets" element={<Rockets />} />
-        <Route path="/missions" element={<Missions />} />
-        <Route path="/profile" element={<MyProfile />} />
+        <Route exact path="/" element={<RocketList />} />
+        <Route exact path="/rockets" element={<RocketList />} />
+        <Route exact path="/missions" element={<Missions />} />
+        <Route exact path="/profile" element={<Profile />} />
       </Routes>
-    </div>
+    </Router>
   );
 };
 
