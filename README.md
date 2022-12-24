@@ -54,7 +54,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Space-X <a name="about-project"></a>
+# 📖 SpaceX-Traveler <a name="about-project"></a>
 
 SpaceX-Traveler allows individuals and organizations to book space travel services and participate in space missions. Our platform makes it convenient for anyone interested in exploring the cosmos to access and experience the excitement of space travel, whether for commercial or scientific purposes.
 
