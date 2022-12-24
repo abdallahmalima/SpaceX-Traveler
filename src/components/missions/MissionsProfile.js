@@ -3,13 +3,11 @@ import { PropTypes } from 'prop-types';
 import ListGroup from 'react-bootstrap/ListGroup';
 
 const MissionsProfile = ({ name }) => (
-  <ListGroup variant="flush">
-    <ListGroup.Item>
-      {' '}
-      {name}
-      {' '}
-    </ListGroup.Item>
-  </ListGroup>
+  <ListGroup.Item>
+    {' '}
+    {name}
+    {' '}
+  </ListGroup.Item>
 );
 
 MissionsProfile.propTypes = {
