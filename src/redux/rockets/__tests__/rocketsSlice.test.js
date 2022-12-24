@@ -1,5 +1,5 @@
-import { initialState, reserveRocket,cancelReservation } from '../rocketsSlice';
-import rocketsReducer from '../rocketsSlice';
+import rocketsReducer, { initialState, reserveRocket, cancelReservation } from '../rocketsSlice';
+
 import fetchRockets from '../rocketsThunk';
 
 describe('rockets slice', () => {
@@ -31,7 +31,6 @@ describe('rockets slice', () => {
     expect(nextState.rockets).toEqual([{ id: rocketId, reserved: true }]);
   });
 
-
   it('dispatches the correct action when cancelling a reservation', () => {
     const rocketId = 3;
     const expectedAction = {
@@ -40,7 +39,6 @@ describe('rockets slice', () => {
     };
     expect(cancelReservation(rocketId)).toEqual(expectedAction);
   });
-
 
   it('cancels a reservation in the state', () => {
     const rocketId = 7;
@@ -53,18 +51,17 @@ describe('rockets slice', () => {
     expect(nextState.rockets).toEqual([{ id: rocketId, reserved: false }]);
   });
 
-
   it('should handle the fetchRockets.pending action', () => {
     const state = {
       rockets: [],
       loading: false,
-      error: 'some error'
+      error: 'some error',
     };
     const newState = rocketsReducer(state, fetchRockets.pending());
     expect(newState).toEqual({
       rockets: [],
       loading: true,
-      error: null
+      error: null,
     });
   });
 
@@ -72,14 +69,14 @@ describe('rockets slice', () => {
     const state = {
       rockets: [],
       loading: true,
-      error: null
+      error: null,
     };
     const payload = [{ id: 1, name: 'Falcon 1' }, { id: 2, name: 'Falcon 9' }];
     const newState = rocketsReducer(state, fetchRockets.fulfilled(payload));
     expect(newState).toEqual({
       rockets: payload,
       loading: false,
-      error: null
+      error: null,
     });
   });
 
@@ -87,15 +84,14 @@ describe('rockets slice', () => {
     const state = {
       rockets: [],
       loading: true,
-      error: null
+      error: null,
     };
     const error = new Error('Request failed');
     const newState = rocketsReducer(state, fetchRockets.rejected(error));
     expect(newState).toEqual({
       rockets: [],
       loading: false,
-      error: 'Request failed'
+      error: 'Request failed',
     });
   });
-
 });
