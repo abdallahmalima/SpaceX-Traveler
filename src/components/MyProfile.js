@@ -19,6 +19,7 @@ const MyProfile = () => {
         {rockets.map((rocket) => (
           <ReservedRocket key={rocket.id} rocket={rocket} />
         ))}
+        { rockets.length === 0 && <p className="firstJoin">&emsp; No Reserved Rocket </p>}
       </div>
     </div>
   );
