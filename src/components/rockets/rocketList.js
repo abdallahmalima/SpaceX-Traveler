@@ -5,9 +5,7 @@ import Rocket from './rocket';
 import rocketStyles from './rocket.module.css';
 
 const RocketList = () => {
-  const rockets = useSelector((state) => state.rockets.rockets);
-  const errorMessage = useSelector((state) => state.rockets.error);
-  const isLoading = useSelector((state) => state.rockets.loading);
+  const { rockets, error, loading } = useSelector((state) => state.rockets);
   const dispatch = useDispatch();
   useEffect(() => {
     if (rockets.length === 0) dispatch(fetchRockets());
@@ -15,8 +13,8 @@ const RocketList = () => {
 
   return (
     <main className={rocketStyles.container}>
-      {isLoading && <h3 className="textError">Loading...</h3>}
-      {errorMessage && <h3 className="textError">{errorMessage}</h3>}
+      {loading && <h3 className="textError">Loading...</h3>}
+      {error && <h3 className="textError">{error}</h3>}
       {rockets.map((rocket) => (
         <Rocket key={rocket.id} rocket={rocket} />
       ))}
