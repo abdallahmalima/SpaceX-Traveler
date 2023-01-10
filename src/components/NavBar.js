@@ -31,7 +31,7 @@ const NavBar = () => {
     <nav className={NavBarStyles.navbar}>
       <div className={NavBarStyles.logoHolder}>
         <img src={Logo} alt="Planet" className={`${NavBarStyles.logo} ${NavBarStyles.marginRight}`} />
-        <h1>Space Travellers&apos; Hub</h1>
+        <h1>Space Traveler&apos;s Hub</h1>
       </div>
       <div className={NavBarStyles.linksHolder}>
         <NavLink key={uuidv4()} className={rocketLinkStyles(location.pathname)} to="/rockets">
