@@ -1,6 +1,6 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import React, { useEffect } from 'react';
-import { Route, Routes, BrowserRouter as Router } from 'react-router-dom';
+import { Route, Routes, HashRouter as Router } from 'react-router-dom';
 import Missions from './pages/Missions';
 import store from './redux/configureStore';
 import { fetchMisions } from './redux/missions/missionsSlice';
